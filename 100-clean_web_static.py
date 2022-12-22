@@ -61,4 +61,5 @@ def do_clean(number=0):
         run('rm -rf /data/web_static/releases/web_static_*.tgz')
     else:
         local('ls -t versions | tail -n +{} | xargs rm -rf'.format(number))
-        run('ls -t /data/web_static/releases | tail -n +{} | xargs rm -rf'.format(number))
+        run('ls -t /data/web_static/releases \
+            | tail -n +{} | xargs rm -rf'.format(number))
